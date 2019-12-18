@@ -27,7 +27,7 @@ pipeline {
         stage('test') {
             steps{
 				echo '输出变量'
-                echo ${parameters.branch}
+           
             }  
         }
     }

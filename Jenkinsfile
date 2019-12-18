@@ -24,11 +24,12 @@ pipeline {
                 }
             }
         }
-        stage('test') {
+        stage('deploy'){
             steps{
-				echo '输出变量'
-           
-            }  
+                echo "操作者是 ${approvalMap['APPROVER']}"
+                echo "发布到什么环境 ${approvalMap['ENV']}"
+                echo "自定义参数 ${approvalMap['myparam']}"
+            }
         }
     }
 }
